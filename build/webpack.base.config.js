@@ -4,13 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  mode: 'development',
   entry: {
     app: './src/main.js'
   },
   output: {
-    filename: '[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].[hash:5].js',
+    chunkFilename: 'js/[name].[hash:5].js',
+  },
+  resolve: {
+    extensions: ['.vue', '.jsx', '.js', '.json']
   },
   module: {
     rules: [
