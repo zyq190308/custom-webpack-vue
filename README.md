@@ -1,7 +1,18 @@
 # 基础版vue环境
 
-## 构建
+##### 依赖
+
 ```bash
 npm install
-npx webpack
+```
+
+##### 开发
+
+``` bash
+npm run dev
+```
+
+##### 生产
+``` bash
+npm run build
 ```
